@@ -1,0 +1,2 @@
+- Crear contenedor de postgres usando la imagen "postgres". El puerto contenedor es 5432
+- Crear cliente de postgres. Usar la imagen "dpage/pgadmin4"
