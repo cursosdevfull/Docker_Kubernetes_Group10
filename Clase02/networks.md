@@ -33,3 +33,9 @@ docker network connect net-course server04
 ```
 docker network disconnect net-course server04
 ```
+
+### Para listar las redes existentes
+
+```
+docker network ls
+```
