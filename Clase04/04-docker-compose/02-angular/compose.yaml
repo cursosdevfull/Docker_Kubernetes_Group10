@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      #context: ./app-courses
+      context: .
+      dockerfile: app-courses/Dockerfile
+      args:
+        - DIR=app-courses
+    image: app-courses
+    container_name: app-courses
+    restart: unless-stopped
+    ports:
+      - "5000:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 5s
