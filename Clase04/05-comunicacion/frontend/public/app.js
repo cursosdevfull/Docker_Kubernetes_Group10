@@ -9,5 +9,6 @@ fetch("/api/config")
       .then((resp) => resp.json())
       .then((resp) => {
         p1.innerHTML = resp.message1;
+        p2.innerHTML = resp.message2;
       });
   });
